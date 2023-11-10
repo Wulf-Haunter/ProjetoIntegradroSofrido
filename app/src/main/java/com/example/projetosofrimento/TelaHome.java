@@ -14,14 +14,5 @@ public class TelaHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_home);
-
-        btnPerfil = (Button) findViewById(R.id.cmdPerfil);
-        btnPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intencaoPerfil = new Intent(TelaHome.this, TelaUsuario.class);
-                startActivity(intencaoPerfil);
-            }
-        });
     }
 }
