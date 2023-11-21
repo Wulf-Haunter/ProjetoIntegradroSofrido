@@ -13,14 +13,24 @@
         android:theme="@style/Theme.MaterialComponents"
         tools:targetApi="31">
         <activity
+            android:name=".CatOcorrencia"
+            android:exported="false"
+            android:parentActivityName=".NovaOcorrencia1"/>
+        <activity
+            android:name=".NovaOcorrencia1"
+            android:exported="false"
+            android:parentActivityName=".TelaHome"/>
+        <activity
             android:name=".TelaUsuario"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TelaHome"/>
         <activity
             android:name=".TelaHome"
             android:exported="false" />
         <activity
             android:name=".TelaLogin"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
