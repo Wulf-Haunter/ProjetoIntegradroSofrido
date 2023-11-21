@@ -1,58 +1,56 @@
 package com.example.projetosofrimento;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projetosofrimento.R;
 
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder> {
 
-    private List<String> cardData; // Botar a informação correta aqui!!!
-    private Context context;
+    private List<String> cardItems;
 
-    public CardAdapter(List<String> cardData, Context context) {
-        this.cardData = cardData;
-        this.context = context;
+    public CardAdapter(List<String> cardItems) {
+        this.cardItems = cardItems;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_card, parent, false);
-        return new ViewHolder(view);
+    public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_card, parent, false);
+        return new CardViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String data = cardData.get(position);
-        if (data != null && !data.isEmpty()) {
-            holder.cardContent.setText(data);
-            holder.cardView.setVisibility(View.VISIBLE);
-        } else {
-            holder.cardView.setVisibility(View.GONE);
-        }
+    public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
+        // Bind your card content here
+        String cardContent = cardItems.get(position);
+        holder.bind(cardContent);
     }
 
     @Override
     public int getItemCount() {
-        return cardData.size();
+        return cardItems.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        CardView cardView;
-        TextView cardContent;
+    static class CardViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(@NonNull View itemView) {
+        private TextView cardContentTextView;
+
+        CardViewHolder(@NonNull View itemView) {
             super(itemView);
-            cardView = itemView.findViewById(R.id.cardView);
-            cardContent = itemView.findViewById(R.id.conteudoCard);
+            cardContentTextView = itemView.findViewById(R.id.cardContentTextView);
+        }
+
+        void bind(String cardContent) {
+            // Bind your card views here
+            cardContentTextView.setText(cardContent);
         }
     }
 }

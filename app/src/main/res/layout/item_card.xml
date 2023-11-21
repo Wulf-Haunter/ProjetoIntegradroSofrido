@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/cardContentTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        tools:ignore="MissingConstraints">
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo eu mi tempor dignissim. Nulla facilisi. Phasellus ut purus ac lacus rhoncus varius vel nec nulla. Nunc fermentum orci ut ipsum bibendum, ut ultrices augue rhoncus. Sed et vestibulum lacus, nec fermentum nunc. Integer nec eros ut felis ultricies finibus. Sed non tincidunt mi, ac blandit libero. Suspendisse potenti."
+        android:padding="8dp"/>
 
-        <TextView
-            android:id="@+id/cardContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
