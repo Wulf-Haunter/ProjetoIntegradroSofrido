@@ -7,21 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class TelaUsuario extends AppCompatActivity {
-    Button btnVoltar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_usuario);
-
-        btnVoltar = (Button) findViewById(R.id.cmdVoltar);
-
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = findViewById(R.id.cmdOcorrencia);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencaoVoltar = new Intent(TelaUsuario.this, TelaHome.class);
-                startActivity(intencaoVoltar);
+                // Intent to start the new activity
+                Intent intent = new Intent(TelaUsuario.this, NovaOcorrencia1.class);
+                startActivity(intent);
             }
         });
     }

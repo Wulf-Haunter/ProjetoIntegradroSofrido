@@ -192,7 +192,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
         app:rippleColor="#ec0089"
-        app:srcCompat="@drawable/outline_add_24" />
+        app:srcCompat="@drawable/outline_add_24_white" />
 
     <TextView
         android:id="@+id/textView12"

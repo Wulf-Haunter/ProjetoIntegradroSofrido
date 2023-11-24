@@ -1,78 +1,60 @@
 package com.example.projetosofrimento;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
-import java.util.List;
+
+import com.example.projetosofrimento.NovaOcorrencia1;
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class TelaHome extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private TextView titleTextView;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_home);
 
-        // Move the view initialization here
-        recyclerView = findViewById(R.id.recyclerView);
-        titleTextView = findViewById(R.id.titleTextView);
+        // Your existing FAB click handling
+        FloatingActionButton fab = findViewById(R.id.cmdOcorrencia);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Intent to start the new activity
+                Intent intent = new Intent(TelaHome.this, NovaOcorrencia1.class);
+                startActivity(intent);
+            }
+        });
 
-        List<String> cardItems = new ArrayList<>();
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.");
-        cardItems.add("Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
-        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        // Handling BottomAppBar menu item clicks
+        BottomAppBar bottomAppBar = findViewById(R.id.bottomAppBar);
+        bottomAppBar.setOnMenuItemClickListener(new BottomAppBar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.perfil) {
+                    // Handle the click for menu item with ID R.id.perfil
+                    openPerfilActivity();
+                    return true; // Indicate that the click has been handled
+                    //  } else if (item.getItemId() == R.id.menu_item2) {
+                    // Handle the click for menu item 2
+                    // You can open another activity or perform any other action
+                    //  return true; // Indicate that the click has been handled
+                }
+                return false; // Indicate that the click has not been handled
+            }
 
-        if (cardItems.isEmpty()) {
-            // If the content is empty, hide the title and recyclerView
-            titleTextView.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.GONE);
-        } else {
-            // If there are card items, set up the RecyclerView and display the title
-            titleTextView.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.VISIBLE);
-
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-            recyclerView.setLayoutManager(layoutManager);
-
-            CardAdapter cardAdapter = new CardAdapter(cardItems);
-            recyclerView.setAdapter(cardAdapter);
-        }
+        });
     }
+
+    private void openPerfilActivity() {
+        // Intent to start another activity (replace YourAnotherActivity.class with the actual class)
+        Intent intent = new Intent(TelaHome.this, TelaUsuario.class);
+        startActivity(intent);
+    }
+
 }

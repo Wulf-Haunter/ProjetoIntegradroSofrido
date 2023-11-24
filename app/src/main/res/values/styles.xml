@@ -7,6 +7,14 @@
         <item name="colorPrimaryDark">#43054e</item>
         <item name="colorAccent">#bf0087</item>
     </style>
+    <style name="CardTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
 
 
