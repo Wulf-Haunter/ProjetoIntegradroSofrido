@@ -9,6 +9,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Bem vindo(a)!"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -19,10 +20,7 @@
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/titleTextView"
-        android:layout_marginTop="1dp"
-        android:clipToPadding="false"
-        android:paddingBottom="100dp">
+        android:layout_below="@id/titleTextView">
 
         <!-- Scrollable content -->
         <androidx.recyclerview.widget.RecyclerView
@@ -33,18 +31,16 @@
     </androidx.core.widget.NestedScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/nestedScrollView">
-
-        <!-- CoordinatorLayout children go here -->
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
             android:backgroundTint="#ec0089"
             app:menu="@menu/bottom_menu"
             app:navigationIcon="@drawable/baseline_home_24" />

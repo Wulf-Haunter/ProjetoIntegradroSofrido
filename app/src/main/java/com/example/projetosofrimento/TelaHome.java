@@ -28,6 +28,36 @@ public class TelaHome extends AppCompatActivity {
         cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
         cardItems.add("Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.");
         cardItems.add("Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        cardItems.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 
         if (cardItems.isEmpty()) {
             // If the content is empty, hide the title and recyclerView
