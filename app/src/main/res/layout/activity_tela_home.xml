@@ -2,8 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="8dp">
+    android:layout_height="match_parent">
 
     <!-- Main Title -->
     <TextView
@@ -21,7 +20,8 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/titleTextView">
+        android:layout_below="@id/titleTextView"
+        android:layout_gravity="bottom">
 
         <!-- Content Container -->
         <LinearLayout
@@ -60,6 +60,7 @@
             android:backgroundTint="#ec0089"
             app:menu="@menu/bottom_menu"
             app:navigationIcon="@drawable/baseline_home_white" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/cmdOcorrencia"
             android:layout_width="wrap_content"
@@ -69,8 +70,6 @@
             app:layout_anchor="@+id/bottomAppBar"
             app:layout_anchorGravity="top|center"
             app:srcCompat="@drawable/outline_add_24_white" />
-
-
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>
