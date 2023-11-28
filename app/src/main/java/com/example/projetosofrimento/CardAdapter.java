@@ -24,18 +24,21 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     // Inner ViewHolder class
     public static class CardViewHolder extends RecyclerView.ViewHolder {
         // Views in your card layout
-        public TextView usuarioTextView;
-        public TextView lugarTextView;
-        public TextView horarioTextview;
-        public TextView diaTextView;
+        public TextView usuariotv;
+        public TextView lugartv;
+        public TextView horariotv;
+        public TextView diatv;
+        public TextView descricaotv;
 
         public CardViewHolder(View itemView) {
             super(itemView);
             // Initialize views
-            usuarioTextView = itemView.findViewById(R.id.cardNomeUsuario);
-            lugarTextView = itemView.findViewById(R.id.otherTextView);
-            horarioTextview = itemView.findViewById(R.id.CardHora);
-            diaTextView = itemView.findViewById(R.id.CardDia);
+            usuariotv = itemView.findViewById(R.id.cardNomeUsuario);
+            lugartv = itemView.findViewById(R.id.otherTextView);
+            horariotv = itemView.findViewById(R.id.CardHora);
+            diatv = itemView.findViewById(R.id.CardDia);
+            descricaotv = itemView.findViewById(R.id.DescricaoOcorrencia);
+
         }
     }
 
@@ -53,10 +56,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
         // Bind data to views
         CardData currentCard = cardList.get(position);
-        holder.usuarioTextView.setText(currentCard.getUsuario());
-        holder.lugarTextView.setText(currentCard.getLugar());
-        holder.diaTextView.setText(currentCard.getDia());
-        holder.horarioTextview.setText(currentCard.getHora());
+        holder.usuariotv.setText(currentCard.getUsuario());
+        holder.lugartv.setText(currentCard.getLugar());
+        holder.horariotv.setText(currentCard.getDia());
+        holder.diatv.setText(currentCard.getHora());
+        holder.descricaotv.setText(currentCard.getDescrição());
         // ... bind other data
     }
 

@@ -10,6 +10,7 @@
     <!-- Horizontal LinearLayout for description and image -->
     <LinearLayout
         android:id="@+id/card_layout"
+        android:padding="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -46,6 +47,7 @@
 
     <!-- New LinearLayout for additional imageviews and textviews -->
     <LinearLayout
+        android:padding="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -91,6 +93,7 @@
         android:id="@+id/TipoDeOcorrencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="4dp"
         android:text="Descrição da ocorrência."
         android:layout_gravity="center_horizontal"
         android:gravity="center"
@@ -100,6 +103,7 @@
 
 
     <TextView
+        android:layout_margin="4dp"
         android:id="@+id/DescricaoOcorrencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

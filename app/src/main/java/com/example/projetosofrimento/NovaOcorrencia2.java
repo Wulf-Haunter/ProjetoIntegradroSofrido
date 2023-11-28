@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CatOcorrencia extends AppCompatActivity {
+public class NovaOcorrencia2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cat_ocorrencia);
+        setContentView(R.layout.activity_nova_ocorrencia2);
     }
 }
