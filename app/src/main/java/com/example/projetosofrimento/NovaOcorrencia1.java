@@ -76,48 +76,46 @@ public class NovaOcorrencia1 extends AppCompatActivity {
                 // Método chamado quando nada é selecionado
             }
         });
-            // Second Spinner
 
+        // Lista de frutas para o segundo Spinner
+        List<String> fruits2 = new ArrayList<>();
+        fruits2.add("Bloco 1");
+        fruits2.add("Bloco 2");
+        fruits2.add("Bloco 3");
+        fruits2.add("Bloco 4");
+        fruits2.add("Bloco 5");
+        fruits2.add("Bloco 6");
+        fruits2.add("Bloco 7");
+        fruits2.add("Bloco 8");
+        fruits2.add("Bloco 9");
+        fruits2.add("Bloco 10");
+        fruits2.add("Bloco 11");
+        fruits2.add("Bloco 12");
+        fruits2.add("Taguatinga");
+        fruits2.add("Edíficio União");
 
-            // Lista de frutas para o segundo Spinner
-            List<String> fruits2 = new ArrayList<>();
-            fruits2.add("Bloco 1");
-            fruits2.add("Bloco 2");
-            fruits2.add("Bloco 3");
-            fruits2.add("Bloco 4");
-            fruits2.add("Bloco 5");
-            fruits2.add("Bloco 6");
-            fruits2.add("Bloco 7");
-            fruits2.add("Bloco 8");
-            fruits2.add("Bloco 9");
-            fruits2.add("Bloco 10");
-            fruits2.add("Bloco 11");
-            fruits2.add("Bloco 12");
-            fruits2.add("Taguatinga");
-            fruits2.add("Edíficio União");
+        // Adapter para o segundo Spinner
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, fruits2);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-            // Adapter para o segundo Spinner
-            ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, fruits2);
-            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Definindo o adapter para o segundo Spinner
+        spinner2.setAdapter(adapter2);
 
-            // Definindo o adapter para o segundo Spinner
-            spinner2.setAdapter(adapter2);
+        // Lidando com a seleção do segundo Spinner
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, android.view.View view, int position, long id) {
+                String selectedCategory = parent.getItemAtPosition(position).toString();
+                // Aqui você pode lidar com a categoria selecionada
+                // Por exemplo, exibindo-a em um Toast
+                Toast.makeText(NovaOcorrencia1.this, "Categoria selecionada (Spinner 2): " + selectedCategory, Toast.LENGTH_SHORT).show();
+            }
 
-            // Lidando com a seleção do segundo Spinner
-            spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, android.view.View view, int position, long id) {
-                    String selectedCategory = parent.getItemAtPosition(position).toString();
-                    // Aqui você pode lidar com a categoria selecionada
-                    // Por exemplo, exibindo-a em um Toast
-                    Toast.makeText(NovaOcorrencia1.this, "Categoria selecionada (Spinner 2): " + selectedCategory, Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-                    // Método chamado quando nada é selecionado
-                }
-            });
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Método chamado quando nada é selecionado
+            }
+        });
 
     }
 }

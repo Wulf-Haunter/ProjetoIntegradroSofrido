@@ -1,20 +1,19 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    android:orientation="vertical">
 
     <!-- Horizontal LinearLayout for description and image -->
     <LinearLayout
         android:id="@+id/card_layout"
-        android:padding="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#bf0087"
         android:orientation="horizontal"
-        android:background="#bf0087">
+        android:padding="4dp">
 
         <ImageView
             android:layout_width="40dp"
@@ -47,12 +46,12 @@
 
     <!-- New LinearLayout for additional imageviews and textviews -->
     <LinearLayout
-        android:padding="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:background="#bf0087"
         android:gravity="center_vertical"
-        android:background="#bf0087">
+        android:orientation="horizontal"
+        android:padding="4dp">
 
         <ImageView
             android:layout_width="40dp"
@@ -93,20 +92,20 @@
         android:id="@+id/TipoDeOcorrencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:text="Descrição da ocorrência."
         android:layout_gravity="center_horizontal"
         android:gravity="center"
+        android:padding="4dp"
+        android:text="Descrição da ocorrência."
         android:textColor="#000000"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
 
     <TextView
-        android:layout_margin="4dp"
         android:id="@+id/DescricaoOcorrenciaFalso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent odio metus, pellentesque nec diam dapibus, laoreet posuere enim. Donec congue, metus nec venenatis vehicula, arcu lorem convallis nibh, at mattis."
         android:textAlignment="viewStart"
         android:textStyle="bold" />
