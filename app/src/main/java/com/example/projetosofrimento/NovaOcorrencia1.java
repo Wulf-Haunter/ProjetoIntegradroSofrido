@@ -32,13 +32,16 @@ public class NovaOcorrencia1 extends AppCompatActivity {
             public void onClick(View view) {
                 String categoriaSelecionada = spinner.getSelectedItem().toString();
                 String localSelecionado = spinner2.getSelectedItem().toString();
+                String descricaoOcorrencia = txtOcorrencia.getText().toString();
+
+                // Save data to the database
+                DBHandler dbHandler = new DBHandler(NovaOcorrencia1.this);
+                dbHandler.addNovaOcorrencia(categoriaSelecionada, localSelecionado, descricaoOcorrencia, "", "");
 
                 // Intent to start TelaHome2
                 Intent intentHome2 = new Intent(NovaOcorrencia1.this, TelaHome2.class);
                 intentHome2.putExtra("categoriaSelecionada", categoriaSelecionada);
                 intentHome2.putExtra("localSelecionado", localSelecionado);
-
-                String descricaoOcorrencia = txtOcorrencia.getText().toString();
                 intentHome2.putExtra("descricaoOcorrencia", descricaoOcorrencia);
                 startActivity(intentHome2);
             }
