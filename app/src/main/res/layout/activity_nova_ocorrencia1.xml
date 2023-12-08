@@ -65,48 +65,55 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Descrição de ocorrência"
+        android:layout_marginTop="48dp"
+        android:text="Onde foi a Ocorrência?"
         android:textColor="#ec0089"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <EditText
-        android:id="@+id/txtDescricaoOcorrencia"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Descreva sua ocorrência"
-        android:textColor="#9F9D9D"
-        android:textStyle="bold"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner_fruits2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="180dp"
         android:text="Urgência"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescricaoOcorrencia" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/cmdContinuarOcorrencia"

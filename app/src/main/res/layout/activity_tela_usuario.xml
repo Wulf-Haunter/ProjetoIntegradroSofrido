@@ -19,12 +19,12 @@
         tools:srcCompat="@drawable/baseline_account_circle_24" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/NomeUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:text="Isabelle  Louise"
+        android:text="Isabelle Louise"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/NomeUsuario" />
 
     <TextView
         android:id="@+id/textView9"
@@ -84,7 +84,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/NomeUsuario" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

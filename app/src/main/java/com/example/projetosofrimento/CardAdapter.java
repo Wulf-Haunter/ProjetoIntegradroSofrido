@@ -35,9 +35,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             // Initialize views
             usuariotv = itemView.findViewById(R.id.cardNomeUsuario);
             lugartv = itemView.findViewById(R.id.otherTextView);
-            horariotv = itemView.findViewById(R.id.CardHora);
-            diatv = itemView.findViewById(R.id.CardDia);
-            descricaotv = itemView.findViewById(R.id.DescricaoOcorrencia);
+            horariotv = itemView.findViewById(R.id.CardHoraFalso);
+            diatv = itemView.findViewById(R.id.CardDiaFalso);
+            descricaotv = itemView.findViewById(R.id.DescricaoOcorrenciaFalso);
 
         }
     }

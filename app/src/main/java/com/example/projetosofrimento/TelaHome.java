@@ -8,6 +8,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.projetosofrimento.NovaOcorrencia1;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -19,6 +20,7 @@ public class TelaHome extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_home);
+
 
         // Your existing FAB click handling
         FloatingActionButton fab = findViewById(R.id.cmdOcorrencia);

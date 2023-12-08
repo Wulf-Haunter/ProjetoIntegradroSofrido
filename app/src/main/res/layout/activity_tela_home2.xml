@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Main Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bem vindo(a)!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- CoordinatorLayout for BottomAppBar and Cards -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleTextView">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <!-- Horizontal LinearLayout for description and image -->
+                <LinearLayout
+                    android:id="@+id/card_layout"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#bf0087">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/baseline_account_circle_24_white" />
+
+                    <TextView
+                        android:id="@+id/cardNomeUsuario"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Isabelle Louise"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/otherTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Bloco 1"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- New LinearLayout for additional imageviews and textviews -->
+                <LinearLayout
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#bf0087">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/baseline_calendar_month_24_white" />
+
+                    <TextView
+                        android:id="@+id/CardDiaFalso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Dia da ocorrencia"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/baseline_access_time_24_white" />
+
+                    <TextView
+                        android:id="@+id/CardHoraFalso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Horario da ocorrencia"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/TipoDeOcorrencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Denúncia ao Professor"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:id="@+id/DescricaoOcorrenciaFalso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent odio metus, pellentesque nec diam dapibus, laoreet posuere enim. Donec congue, metus nec venenatis vehicula, arcu lorem convallis nibh, at mattis."
+                    android:textAlignment="viewStart"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- BottomAppBar -->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#ec0089"
+            app:menu="@menu/bottom_menu"
+            app:navigationIcon="@drawable/baseline_home_white" />
+
+        <!-- FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cmdOcorrencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#43054e"
+            app:tint="@android:color/white"
+            app:layout_anchor="@+id/bottomAppBar"
+            app:layout_anchorGravity="top|center"
+            app:srcCompat="@drawable/outline_add_24_white" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

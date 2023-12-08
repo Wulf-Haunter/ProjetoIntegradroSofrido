@@ -13,9 +13,12 @@
         android:theme="@style/TemaAppTeste"
         tools:targetApi="31">
         <activity
+            android:name=".TelaHome2"
+            android:exported="false" />
+        <activity
             android:name=".NovaOcorrencia2"
             android:exported="false"
-            android:parentActivityName=".NovaOcorrencia1"/>
+            android:parentActivityName=".NovaOcorrencia1" />
         <activity
             android:name=".NovaOcorrencia1"
             android:exported="false"

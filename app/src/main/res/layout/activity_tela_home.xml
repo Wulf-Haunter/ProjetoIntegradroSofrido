@@ -1,75 +1,75 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <!-- Main Title -->
-    <TextView
-        android:id="@+id/titleTextView"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Bem vindo(a)!"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <!-- CoordinatorLayout for BottomAppBar and Cards -->
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/titleTextView"
-        android:layout_gravity="bottom">
+        <!-- Main Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bem vindo(a)!"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <!-- Content Container -->
-        <LinearLayout
+        <!-- CoordinatorLayout for BottomAppBar and Cards -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_below="@id/titleTextView"
+            android:layout_gravity="bottom">
 
-            <!-- Visible Card with Information -->
-            <include layout="@layout/card_layout" />
-
-            <!-- Invisible Card (Initially Gone) -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/invisibleCard"
+            <!-- Content Container -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:visibility="gone">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <!-- Visible Card with Information -->
+                <include layout="@layout/card_layout" />
 
-                <TextView
+                <!-- Invisible Card (Initially Gone) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/invisibleCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Invisible Card Content" />
+                    android:layout_margin="8dp"
+                    android:visibility="gone">
 
-            </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Invisible Card Content" />
 
-        <!-- BottomAppBar -->
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:backgroundTint="#ec0089"
-            app:menu="@menu/bottom_menu"
-            app:navigationIcon="@drawable/baseline_home_white" />
+                </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/cmdOcorrencia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#43054e"
-            app:tint="@android:color/white"
-            app:layout_anchor="@+id/bottomAppBar"
-            app:layout_anchorGravity="top|center"
-            app:srcCompat="@drawable/outline_add_24_white" />
+            </LinearLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</RelativeLayout>
+            <!-- BottomAppBar -->
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#ec0089"
+                app:menu="@menu/bottom_menu"
+                app:navigationIcon="@drawable/baseline_home_white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/cmdOcorrencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#43054e"
+                app:tint="@android:color/white"
+                app:layout_anchor="@+id/bottomAppBar"
+                app:layout_anchorGravity="top|center"
+                app:srcCompat="@drawable/outline_add_24_white" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
