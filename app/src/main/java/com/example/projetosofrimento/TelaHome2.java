@@ -20,7 +20,10 @@ public class TelaHome2 extends AppCompatActivity {
         if (extras != null) {
             // Get the data passed with the Intent
             String ocorridoText = extras.getString("ocorrido_text");
-            String descricaoText = extras.getString("descricao_text");
+            String categoria = extras.getString("categoriaSelecionada");
+            String lugar = extras.getString("localSelecionado");
+            String descricaoText = extras.getString("descricaoOcorrencia");
+            String txtNome = extras.getString("Nome_Usuário");
 
             // Find the TextView components in your layout
             TextView cardNomeUsuario = findViewById(R.id.cardNomeUsuario);
@@ -28,12 +31,14 @@ public class TelaHome2 extends AppCompatActivity {
             TextView CardHora = findViewById(R.id.CardHoraFalso);
             TextView TipoDeOcorrencia = findViewById(R.id.TipoDeOcorrencia);
             TextView DescricaoOcorrencia = findViewById(R.id.DescricaoOcorrenciaFalso);
+            TextView localOcorrencia = findViewById(R.id.lugarOcorrencia);
 
             // Set the text values with the data received from the previous activity
-            //cardNomeUsuario.setText("botar nome do usuário!");
+           // cardNomeUsuario.setText(txtNome);
             CardDia.setText(getCurrentDate());
             CardHora.setText(getCurrentTime());
-            TipoDeOcorrencia.setText(ocorridoText); // Set appropriate value
+            localOcorrencia.setText(lugar);
+            TipoDeOcorrencia.setText(categoria); // Set appropriate value
             DescricaoOcorrencia.setText(descricaoText);
         }
     }

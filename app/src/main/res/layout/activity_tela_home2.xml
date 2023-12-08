@@ -28,9 +28,6 @@
             android:layout_margin="8dp">
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -57,17 +54,17 @@
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="Isabelle Louise"
-                        android:textAlignment="center"
+                        android:textAlignment="textStart"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/otherTextView"
+                        android:id="@+id/lugarOcorrencia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="8dp"
-                        android:text="Bloco 1"
+                        android:text="Lugar Ocorrência"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
@@ -94,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="8dp"
-                        android:text="Dia da ocorrencia"
+                        android:text="Dia da ocorrência"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
@@ -111,7 +108,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Horario da ocorrencia"
+                        android:text="Horario da ocorrência"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
                         android:textSize="14sp"
@@ -122,22 +119,23 @@
                     android:id="@+id/TipoDeOcorrencia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="Denúncia ao Professor"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Tipo de ocorrência"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textStyle="bold"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
 
 
                 <TextView
-                    android:layout_margin="4dp"
                     android:id="@+id/DescricaoOcorrenciaFalso"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent odio metus, pellentesque nec diam dapibus, laoreet posuere enim. Donec congue, metus nec venenatis vehicula, arcu lorem convallis nibh, at mattis."
-                    android:textAlignment="viewStart"
+                    android:textAlignment="center"
                     android:textStyle="bold" />
 
 

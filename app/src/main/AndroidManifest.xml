@@ -15,11 +15,7 @@
         <activity
             android:name=".TelaHome2"
             android:exported="false" />
-        <activity
-            android:name=".NovaOcorrencia2"
-            android:exported="false"
-            android:parentActivityName=".NovaOcorrencia1" />
-        <activity
+            <activity
             android:name=".NovaOcorrencia1"
             android:exported="false"
             android:parentActivityName=".TelaHome" />

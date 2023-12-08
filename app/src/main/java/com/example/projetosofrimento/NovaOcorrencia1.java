@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,17 +24,25 @@ public class NovaOcorrencia1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nova_ocorrencia1);
         FloatingActionButton fab = findViewById(R.id.cmdContinuarOcorrencia);
+        Spinner spinner = findViewById(R.id.spinner_fruits);
+        Spinner spinner2 = findViewById(R.id.spinner_fruits2);
+        EditText txtOcorrencia = findViewById(R.id.edtOcorrencia);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Intent to start the new activity
-                Intent intent2 = new Intent(NovaOcorrencia1.this, NovaOcorrencia2.class);
-                startActivity(intent2);
+                String categoriaSelecionada = spinner.getSelectedItem().toString();
+                String localSelecionado = spinner2.getSelectedItem().toString();
+
+                // Intent to start TelaHome2
+                Intent intentHome2 = new Intent(NovaOcorrencia1.this, TelaHome2.class);
+                intentHome2.putExtra("categoriaSelecionada", categoriaSelecionada);
+                intentHome2.putExtra("localSelecionado", localSelecionado);
+
+                String descricaoOcorrencia = txtOcorrencia.getText().toString();
+                intentHome2.putExtra("descricaoOcorrencia", descricaoOcorrencia);
+                startActivity(intentHome2);
             }
         });
-
-        Spinner spinner = findViewById(R.id.spinner_fruits);
-
 
         // Lista de frutas
         List<String> fruits = new ArrayList<>();
@@ -68,7 +77,7 @@ public class NovaOcorrencia1 extends AppCompatActivity {
             }
         });
             // Second Spinner
-            Spinner spinner2 = findViewById(R.id.spinner_fruits2);
+
 
             // Lista de frutas para o segundo Spinner
             List<String> fruits2 = new ArrayList<>();
